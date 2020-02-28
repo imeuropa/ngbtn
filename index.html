@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>nigga button</title>
+    </head>
+    <body>
+        <script>
+            var i = 0;
+            function shit() {
+                console.log(i+1);
+                i++;
+                var e = document.getElementById("ass").innerHTML;
+                document.getElementById("ass").innerHTML = "<b>"+e+"<br>"+i+"</b>";
+                var elem = document.getElementById('nigga');
+                elem.scrollTop = elem.scrollHeight;
+            }
+            function sendMsg(c,n,x) {
+                if (c !== "") {
+                    var e = document.getElementById("ass").innerHTML;
+                    document.getElementById("ass").innerHTML = "<b>"+e+"<br><i>"+n+"</i>: "+c+"</b>";
+                    var elem = document.getElementById('nigga');
+                    elem.scrollTop = elem.scrollHeight;
+                    x.value = "";
+                }
+            }
+        </script>
+        <style>
+            html,body {
+                margin: 30px;
+            }
+
+            .shit {
+                background-color: red;
+                padding: 30px;
+            }
+            
+            .shit p {
+                font-size: 2rem;
+            }
+
+            #ass {
+                font-family: 'Courier New', Courier, monospace;
+            }
+
+            .noselect {
+                -webkit-touch-callout: none; /* iOS Safari */
+                    -webkit-user-select: none; /* Safari */
+                    -khtml-user-select: none; /* Konqueror HTML */
+                    -moz-user-select: none; /* Old versions of Firefox */
+                        -ms-user-select: none; /* Internet Explorer/Edge */
+                            user-select: none; /* Non-prefixed version, currently
+                                                supported by Chrome, Opera and Firefox */
+            }
+            
+            .console {
+                height: 320px;
+                width: 100%;
+                overflow: scroll;
+            }
+        </style>
+        <div class="shit" onclick="shit();">
+            <p class="noselect">nigge</p>
+        </div>
+        <h1>console:</h1>
+        <div class="console" id="nigga">
+            <p id="ass"></p>
+        </div>
+        <input type="text" placeholder="name" id="name"><input type="text" placeholder="Text" id="msg"><input type="button" onclick="sendMsg(document.getElementById('msg').value,document.getElementById('name').value,document.getElementById('msg'));" value="Send">
+    </body>
+</html>
